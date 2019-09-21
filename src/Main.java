@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+
         College c = new College();
         Group g = new Group();
         Teacher t;
@@ -78,6 +79,14 @@ public class Main {
                     String sGender = userInput.next();
 
                     System.out.println("Please input the age of the student.");
+                    while(!userInput.hasNextInt()){
+
+                        System.out.println("Please only input a number.");
+                        userInput.next();
+                    }
+                    
+
+
                     int sAge = userInput.nextInt();
 
                     s = new Student(sName, sEmail, sStage, sGender, sAge);
