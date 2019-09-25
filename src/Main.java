@@ -10,6 +10,7 @@ public class Main {
         Teacher t;
         Student s;
 
+
         Scanner userInput = new Scanner(System.in);
 
         boolean endlessLoop = true;
@@ -34,11 +35,13 @@ public class Main {
 
                     g = new Group();
 
-                    String input1 = userInput.next();
-                    int input2 = userInput.nextInt();
+                    String gName = userInput.next();
+                    int gMaxStudents = userInput.nextInt();
 
-                    g.setMaxStudents(input2);
-                    g.setGroupName(input1);
+
+                    g.setMaxStudents(gMaxStudents);
+                    g.setGroupName(gName);
+                    c.addGroup(g);
                     break;
 
                 case "c":
@@ -64,7 +67,7 @@ public class Main {
                     break;
 
                 case "d":
-                    System.out.println("Please choose the attributes of the student");
+                    System.out.println("Please enter the attributes of the student");
 
                     System.out.println("Please input the name of the student");
                     String sName = userInput.next();
@@ -79,20 +82,32 @@ public class Main {
                     String sGender = userInput.next();
 
                     System.out.println("Please input the age of the student.");
-                    while(!userInput.hasNextInt()){
+                    while (!userInput.hasNextInt()) {
 
                         System.out.println("Please only input a number.");
                         userInput.next();
                     }
-                    
-
 
                     int sAge = userInput.nextInt();
 
                     s = new Student(sName, sEmail, sStage, sGender, sAge);
 
-                    g.addStudent(s);
-                    c.addStudent(s);
+                    if (c.getGroups().size() > 1) {
+
+
+                        c.groupList();
+
+                        int groupIndex = userInput.nextInt();
+
+                        c.addStudentToGroup(groupIndex, s);
+
+
+                    } else {
+                        System.out.println("Note: If there is only one group, the student was automatically added to it.");
+
+                        c.addStudentToGroup(0, s);
+                        c.addStudent(s);
+                    }
                     break;
 
                 case "e":
@@ -103,6 +118,7 @@ public class Main {
 
                     System.out.println(c.getName());
                     System.out.println(g.getGroupName());
+                    c.test(0);
 
                     endlessLoop = false;
                     break;

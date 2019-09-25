@@ -18,7 +18,7 @@ public class Group {
         this.teacher = newTeacher;
     }
     public String toString (){
-        return String.valueOf(teacher) + students;
+        return groupName + String.valueOf(students);//change it you bastard!!!
     }
 
 

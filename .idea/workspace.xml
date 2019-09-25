@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="055a7335-ef4f-4cca-8e2a-7b295bcf3eb3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Schedule/College.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Schedule/College.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Schedule/Group.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Schedule/Group.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Schedule/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Schedule/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Schedule/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Schedule/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Schedule/Teacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Schedule/Teacher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/College.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/College.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Group.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Teacher.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +79,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

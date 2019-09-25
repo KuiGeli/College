@@ -5,46 +5,77 @@ public class College {
 
     private String name;
 
-        private List<Group> groups = new ArrayList<Group>();
-        private List<Teacher> teachers = new ArrayList<Teacher>();
-        private List<Student> students = new ArrayList<Student>();
+    private List<Group> groups = new ArrayList<Group>();
+    private List<Teacher> teachers = new ArrayList<Teacher>();
+    private List<Student> students = new ArrayList<Student>();
 
     public College(String name) {
         this.name = name;
     }
 
+    public void addStudentToGroup(int groupIndex, Student newStudent) {
+        groups.get(groupIndex).addStudent(newStudent);
+
+    }
+
+
+    public void addTeacherToGroup(int groupIndex, Teacher newTeacher) {
+        groups.get(groupIndex).addTeacher(newTeacher);
+
+
+    }
+
+    public void groupList() {
+
+        System.out.println("Pleas type in the number of the selected group.");
+
+        for (int i = 0; i <= groups.size() - 1; i++) {
+
+            System.out.println(i + " " + groups.get(i));
+        }
+
+    }
+
     public College() {
     }
 
-    public void addGroup (Group newGroup){
-            groups.add(newGroup);
 
-        }
+    public void test (int i ){
+        System.out.println(groups.get(i));
+    }
 
-    public void addStudent (Student newStudent){
+    public List<Group> getGroups() {
+        return groups;
+    }
+
+    public void addGroup(Group newGroup) {
+        groups.add(newGroup);
+    }
+
+    public void addStudent(Student newStudent) {
         students.add(newStudent);
 
     }
 
-    public void addTeacher (Teacher newTeacher){
+    public void addTeacher(Teacher newTeacher) {
         teachers.add(newTeacher);
 
     }
 
 
-        public boolean isStudentDuplicate (String email){
-            boolean isIt = false;
+    public boolean isStudentDuplicate(String email) {
+        boolean isIt = false;
 
-            for (Student student: this.students){
-                if (student.getEmail().equals(email)){
-                    isIt = true;
-                    break;
-                }
+        for (Student student : this.students) {
+            if (student.getEmail().equals(email)) {
+                isIt = true;
+                break;
             }
-
-            return isIt;
-
         }
+
+        return isIt;
+
+    }
 
 
     public String getName() {

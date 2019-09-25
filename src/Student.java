@@ -8,6 +8,7 @@ public class Student {
     private String gender;
     private int age;
 
+
     public Student(String name, String email, String stage, String gender, int age) {
         this.name = name;
         this.email = email;
@@ -18,7 +19,8 @@ public class Student {
 
     public String toString (){
 
-        return name + " " + email+ " " + stage+ " " + gender+ " " + String.valueOf(age);
+        return "Name: " + name + " Email address: " + email+ " Stage/Grade: " + stage+ " Gender: " + gender+ "  Age: " + String.valueOf(age);
+
     }
 
     public String getName() {

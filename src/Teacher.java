@@ -14,7 +14,7 @@ public class Teacher {
 
     public String toString () {
 
-        return name + speciality + email + phoneNumber;
+        return "Name: " + name + " Speciality: " + speciality + " Email address: " + email + " Phone number: " + phoneNumber;
     }
 
     public String getName() {
