@@ -5,11 +5,11 @@ public class Student {
     private String name;
     private String email;
     private String stage;
-    private String gender;
+    private char gender;
     private int age;
 
 
-    public Student(String name, String email, String stage, String gender, int age) {
+    public Student(String name, String email, String stage, char gender, int age) {
         this.name = name;
         this.email = email;
         this.stage = stage;
@@ -47,11 +47,11 @@ public class Student {
         this.stage = stage;
     }
 
-    public String getGender() {
+    public char getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(char gender) {
         this.gender = gender;
     }
 

@@ -21,6 +21,9 @@ public class Group {
         return groupName + String.valueOf(students);//change it you bastard!!!
     }
 
+    public void removeStudent (Student student){
+        students.contains(student);
+    }
 
     public String getGroupName() {
         return groupName;

@@ -36,9 +36,48 @@ public class College {
 
     }
 
+    public void teacherList() {
+
+        System.out.println("Pleas type in the number of the selected teacher.");
+
+        for (int i = 0; i <= teachers.size() - 1; i++) {
+
+            System.out.println(i + " " + teachers.get(i));
+        }
+
+    }
+
+    public void studentList() {
+
+        System.out.println("Pleas type in the number of the selected student.");
+
+        for (int i = 0; i <= students.size() - 1; i++) {
+
+            System.out.println(i + " " + students.get(i));
+        }
+
+    }
+
+    public void removeStudent (Student student){
+
+        students.remove(student);
+
+    }
+
     public College() {
     }
 
+    public Teacher getIndividualTeacher (int teacherIndex){
+
+        return teachers.get(teacherIndex);
+
+    }
+
+    public Student getIndividualStudent (int studentIndex){
+
+        return students.get(studentIndex);
+
+    }
 
     public void test (int i ){
         System.out.println(groups.get(i));

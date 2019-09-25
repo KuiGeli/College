@@ -62,11 +62,26 @@ public class Main {
 
                     t = new Teacher(tName, tSpeciality, tEmail, tPhoneNumber);
 
-                    g.addTeacher(t);
                     c.addTeacher(t);
                     break;
 
                 case "d":
+
+
+                    c.teacherList();
+
+                    int teacherIndex = userInput.nextInt();
+
+                    c.groupList();
+
+                    int groupIndex = userInput.nextInt();
+
+                    c.addTeacherToGroup(groupIndex, c.getIndividualTeacher(teacherIndex));
+
+
+                    break;
+
+                case "e":
                     System.out.println("Please enter the attributes of the student");
 
                     System.out.println("Please input the name of the student");
@@ -79,7 +94,7 @@ public class Main {
                     String sStage = userInput.next();
 
                     System.out.println("Please input the gender of the student");
-                    String sGender = userInput.next();
+                    char sGender = userInput.next().charAt(0);
 
                     System.out.println("Please input the age of the student.");
                     while (!userInput.hasNextInt()) {
@@ -97,9 +112,9 @@ public class Main {
 
                         c.groupList();
 
-                        int groupIndex = userInput.nextInt();
+                        int groupIndex1 = userInput.nextInt();
 
-                        c.addStudentToGroup(groupIndex, s);
+                        c.addStudentToGroup(groupIndex1, s);
 
 
                     } else {
@@ -110,8 +125,15 @@ public class Main {
                     }
                     break;
 
-                case "e":
-                    System.out.println(c.getStudents());
+                case "f":
+
+                    c.studentList();
+
+                    int studentIndex = userInput.nextInt();
+
+                    c.removeStudent(c.getIndividualStudent(studentIndex));
+
+
                     break;
 
                 case "ee":
