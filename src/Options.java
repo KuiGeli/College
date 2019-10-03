@@ -9,6 +9,8 @@ public class Options {
         System.out.println("d) Add a teacher to a group.");
         System.out.println("e) Add a new student.");
         System.out.println("f) Remove a student from college.");
+        System.out.println("g) Add a new room.");
+        System.out.println("e) Schedule the groups into rooms.");
 
     }
 }

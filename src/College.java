@@ -8,10 +8,18 @@ public class College {
     private List<Group> groups = new ArrayList<Group>();
     private List<Teacher> teachers = new ArrayList<Teacher>();
     private List<Student> students = new ArrayList<Student>();
+    private List<ClassRoom> classRooms = new ArrayList<>();
 
     public College(String name) {
         this.name = name;
     }
+
+
+
+    public void addGroupToClassRoom(int classRoomIndex, Group newGroup){
+        classRooms.get(classRoomIndex).addSchedule(1, newGroup);
+    }
+
 
     public void addStudentToGroup(int groupIndex, Student newStudent) {
         groups.get(groupIndex).addStudent(newStudent);
@@ -35,6 +43,18 @@ public class College {
         }
 
     }
+
+    public void roomList() {
+
+        System.out.println("Pleas type in the number of the selected room.");
+
+        for (int i = 0; i <= classRooms.size() - 1; i++) {
+
+            System.out.println(i + " " + classRooms.get(i));
+        }
+
+    }
+
 
     public void teacherList() {
 
@@ -64,7 +84,8 @@ public class College {
 
     }
 
-    public College() {
+    public College (){
+
     }
 
     public Teacher getIndividualTeacher (int teacherIndex){
@@ -99,6 +120,9 @@ public class College {
     public void addTeacher(Teacher newTeacher) {
         teachers.add(newTeacher);
 
+    }
+    public void addRoom(ClassRoom newRoom){
+        classRooms.add(newRoom);
     }
 
 

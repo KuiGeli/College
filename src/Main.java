@@ -1,14 +1,19 @@
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
+        LocalDateTime now = LocalDateTime.now();
+
+        System.out.println(now.plusDays(1));
 
         College c = new College();
         Group g = new Group();
         Teacher t;
         Student s;
+        ClassRoom cR;
 
 
         Scanner userInput = new Scanner(System.in);
@@ -38,7 +43,6 @@ public class Main {
                     String gName = userInput.next();
                     int gMaxStudents = userInput.nextInt();
 
-
                     g.setMaxStudents(gMaxStudents);
                     g.setGroupName(gName);
                     c.addGroup(g);
@@ -46,7 +50,6 @@ public class Main {
 
                 case "c":
                     System.out.println("Please choose the attributes of the teacher");
-
 
                     System.out.println("Please input the name of the teacher.");
                     String tName = userInput.next();
@@ -67,7 +70,6 @@ public class Main {
 
                 case "d":
 
-
                     c.teacherList();
 
                     int teacherIndex = userInput.nextInt();
@@ -77,7 +79,6 @@ public class Main {
                     int groupIndex = userInput.nextInt();
 
                     c.addTeacherToGroup(groupIndex, c.getIndividualTeacher(teacherIndex));
-
 
                     break;
 
@@ -109,7 +110,6 @@ public class Main {
 
                     if (c.getGroups().size() > 1) {
 
-
                         c.groupList();
 
                         int groupIndex1 = userInput.nextInt();
@@ -133,6 +133,18 @@ public class Main {
 
                     c.removeStudent(c.getIndividualStudent(studentIndex));
 
+
+                    break;
+
+                case "g":
+
+                    System.out.println("Please enter the name of the room.");
+
+                    String roomName = userInput.next();
+
+                    cR = new ClassRoom(roomName);
+
+                    c.addRoom(cR);
 
                     break;
 
